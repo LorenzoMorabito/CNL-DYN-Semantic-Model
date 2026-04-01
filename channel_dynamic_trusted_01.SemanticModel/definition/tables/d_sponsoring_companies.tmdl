@@ -1,0 +1,57 @@
+table d_sponsoring_companies
+	lineageTag: b26c0751-9f52-463f-9702-da850dca61a9
+
+	column SPONSORING_COMPANY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: adf51c64-b9c5-434e-a9ca-a4815a94d131
+		summarizeBy: count
+		sourceColumn: SPONSORING_COMPANY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPONSORING_COMPANY
+		dataType: string
+		lineageTag: 70a9bb08-a867-494e-bc8a-4af25b6913be
+		summarizeBy: none
+		sourceColumn: SPONSORING_COMPANY
+
+		annotation SummarizationSetBy = Automatic
+
+	column OUR_REPRESENTING_COMPANY
+		dataType: string
+		lineageTag: d4e7b6fe-d35b-4a64-8861-ca61a62d0c87
+		summarizeBy: none
+		sourceColumn: OUR_REPRESENTING_COMPANY
+
+		annotation SummarizationSetBy = Automatic
+
+	column MENARINI_FLAG
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ea419c70-749b-41d3-9e1a-4b2ec14207a6
+		summarizeBy: none
+		sourceColumn: MENARINI_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6cda4bbb-ef3b-4137-ba63-b48a72881c24
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_sponsoring_companies = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_sponsoring_companies_Table = trusted_starschema_01_Schema{[Name="d_sponsoring_companies",Kind="Table"]}[Data]
+				in
+				    d_sponsoring_companies_Table
+

@@ -1,0 +1,40 @@
+table d_contact_quality
+	lineageTag: d752157a-d716-4698-befa-ffe09048540d
+
+	column CONTACT_QUALITY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 15855edc-083f-42bf-8e1d-a99e70b5234f
+		summarizeBy: none
+		sourceColumn: CONTACT_QUALITY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTACT_QUALITY
+		dataType: string
+		lineageTag: 96da8285-4056-4ef7-8edc-b65271253216
+		summarizeBy: none
+		sourceColumn: CONTACT_QUALITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a2cbdde1-6d5e-4039-ad65-b36fe72f6a96
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_contact_quality = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_contact_quality_Table = trusted_starschema_01_Schema{[Name="d_contact_quality",Kind="Table"]}[Data]
+				in
+				    d_contact_quality_Table
+

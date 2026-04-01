@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "channel_dynamic_trusted_02"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "aa8bfa40-8845-4065-9bb4-d9f781fd5038"
+  }
+}

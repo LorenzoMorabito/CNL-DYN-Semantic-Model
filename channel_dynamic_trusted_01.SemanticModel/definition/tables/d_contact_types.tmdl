@@ -1,0 +1,48 @@
+table d_contact_types
+	lineageTag: 777bc768-5e33-4210-8f48-acd6ed993a35
+
+	column CONTACT_TYPE_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: fb48c2a7-4a2e-41d1-9e62-d7ef6c6c8f32
+		summarizeBy: none
+		sourceColumn: CONTACT_TYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTACT_TYPE
+		dataType: string
+		lineageTag: 5f9277ba-0fcb-459e-9c78-94ac0605adb7
+		summarizeBy: none
+		sourceColumn: CONTACT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column OUR_CONTACT_TYPE
+		dataType: string
+		lineageTag: 1a14f05a-6ca8-4481-bcbf-dd75eb59cff5
+		summarizeBy: none
+		sourceColumn: OUR_CONTACT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7c6d960a-2ca1-4af5-b3b7-f4d14380a42a
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_contact_types = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_contact_types_Table = trusted_starschema_01_Schema{[Name="d_contact_types",Kind="Table"]}[Data]
+				in
+				    d_contact_types_Table
+

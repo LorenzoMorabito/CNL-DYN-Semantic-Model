@@ -1,0 +1,40 @@
+table d_material_left_abstr_clinical_lit_data
+	lineageTag: de66ae40-457a-4adf-9d6e-5b6db8a3e2ac
+
+	column MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 70a3d359-7e0b-4911-a417-4644466bbc08
+		summarizeBy: none
+		sourceColumn: MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA
+		dataType: string
+		lineageTag: db2db650-384d-4d87-838c-52082bc0cd81
+		summarizeBy: none
+		sourceColumn: MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 97d5744c-e622-48b3-abbe-7a119a072cad
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_material_left_abstr_clinical_lit_data = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_material_left_abstr_clinical_lit_data_Table = trusted_starschema_01_Schema{[Name="d_material_left_abstr_clinical_lit_data",Kind="Table"]}[Data]
+				in
+				    d_material_left_abstr_clinical_lit_data_Table
+

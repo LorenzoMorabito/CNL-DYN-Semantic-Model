@@ -1,0 +1,138 @@
+relationship 17678ac1-1ef3-41c1-9588-5396ebbf9861
+	fromColumn: f_channel_dynamic_data.CONTACT_TYPE_ID
+	toColumn: d_contact_types.CONTACT_TYPE_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 948965ae-f2f6-42a5-9e15-4250f7966ac2
+	fromColumn: f_channel_dynamic_data.CONTACT_QUALITY_ID
+	toColumn: d_contact_quality.CONTACT_QUALITY_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 563165ba-d10b-4bdc-a89a-322a181e7598
+	fromColumn: f_channel_dynamic_data.SPECIALTY_ID
+	toColumn: d_specialty.SPECIALTY_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship b6fd19b7-185a-45af-a76a-524c626cb6c9
+	fromColumn: f_channel_dynamic_data.CLINICAL_TRIAL_TYPE_ID
+	toColumn: d_clinical_trial_types.CLINICAL_TRIAL_TYPE_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 501c905d-dc2f-41df-b64e-922f25a4ac6b
+	fromColumn: f_channel_dynamic_data.MANUFACTURER_ID
+	toColumn: d_manufacturers.MANUFACTURER_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 839ca6f8-3de2-4f3b-b5b3-ce0b97f49281
+	fromColumn: f_channel_dynamic_data.MOLECULE_ID
+	toColumn: d_molecules.MOLECULE_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8dded9f3-cafa-41ba-b683-9af719756ab1
+	fromColumn: f_channel_dynamic_data.MATERIAL_LEFT_SAMPLE_ID
+	toColumn: d_material_left_samples.MATERIAL_LEFT_SAMPLE_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship f3e82fa7-5ba7-439e-bfe6-a92ec168caf6
+	fromColumn: f_channel_dynamic_data.REPRESENTING_COMPANY_ID
+	toColumn: d_representing_company.REPRESENTING_COMPANY_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6c60a876-57b3-4880-b352-e7e91fd1be35
+	fromColumn: f_channel_dynamic_data.COMUNICATION_CHANNEL_ID
+	toColumn: d_comunication_channels.COMUNICATION_CHANNEL_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 734a6ecb-30bd-4f9f-b8cb-e2c6c3e46d55
+	fromColumn: f_channel_dynamic_data.PRESENTATION_POSITION_ID
+	toColumn: d_presentation_position.PRESENTATION_POSITION_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 110190af-8dbc-4b44-a71c-3d1adf7cd207
+	fromColumn: f_channel_dynamic_data.DETAILS_DURATION_ID
+	toColumn: d_details_duration.DETAILS_DURATION_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0ca86837-afa9-4c01-a91a-4c0c8896f132
+	fromColumn: f_channel_dynamic_data.VISIT_DURATION_ID
+	toColumn: d_visit_duration.VISIT_DURATION_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship f99ac94a-b065-4a46-9064-bd343534faa0
+	fromColumn: f_channel_dynamic_data.MEETING_TYPE_ID
+	toColumn: d_meeting_types.MEETING_TYPE_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship f3a66be8-d7bc-4d05-ade5-f604445119f9
+	fromColumn: f_channel_dynamic_data.MATERIAL_LEFT_PROMOTIONAL_PRODUCT_LIT_ID
+	toColumn: d_material_left_promotional_product_lit.MATERIAL_LEFT_PROMOTIONAL_PRODUCT_LIT_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0078a63c-0e32-4e7a-87ba-004422c8b238
+	fromColumn: f_channel_dynamic_data.MATERIAL_LEFT_PATIENT_EDUCATIONAL_LIT_ID
+	toColumn: d_material_left_patient_educational_lit.MATERIAL_LEFT_PATIENT_EDUCATIONAL_LIT_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship fcfe1bec-cdf1-4e95-93fe-88c51a6d1dea
+	fromColumn: f_channel_dynamic_data.MATERIAL_LEFT_OTHER_ID
+	toColumn: d_material_left_other.MATERIAL_LEFT_OTHER_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 99f42d55-68a2-4030-9f70-5bb4ce222f04
+	fromColumn: f_channel_dynamic_data.INTERNATIONAL_BRAND_ID
+	toColumn: d_international_brands.INTERNATIONAL_BRAND_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3b6e4c44-153b-4d10-9d78-f3ace15d3b92
+	fromColumn: f_channel_dynamic_data.LOCAL_BRAND_ID
+	toColumn: d_local_brands.LOCAL_BRAND_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3b6e6200-575f-42ae-8196-ff1f92db8cc0
+	fromColumn: f_channel_dynamic_data.CORPORATION_ID
+	toColumn: d_corporations.CORPORATION_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship aef3a5a7-6350-4307-80fc-983622071421
+	fromColumn: f_channel_dynamic_data.PRODUCT_PRESENTED_ID
+	toColumn: d_products_presented.PRODUCT_PRESENTED_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship e9350b63-2e8c-46cd-9634-6056b3e0726f
+	fromColumn: f_channel_dynamic_data.PRESCRIPTION_CURRENT_ID
+	toColumn: d_prescription_current.PRESCRIPTION_CURRENT_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 25b402dd-42f9-4611-a582-fc6366f3430b
+	fromColumn: f_channel_dynamic_data.MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA_ID
+	toColumn: d_material_left_abstr_clinical_lit_data.MATERIAL_LEFT_ABSTR_CLINICAL_LIT_DATA_ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4ea06386-f740-4b6f-8a55-1bec9ee3e8f3
+	fromColumn: f_channel_dynamic_data.PRESCRIPTION_FUTURE_ID
+	toColumn: d_prescription_future.PRESCRIPTION_FUTURE_ID
+
+	annotation PBI_IsFromSource = FS
+

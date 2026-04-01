@@ -1,0 +1,40 @@
+table d_prescription_future
+	lineageTag: 9e66a74b-39e9-46d5-8157-52427d8eae8f
+
+	column PRESCRIPTION_FUTURE_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: ac1e260c-c971-4d06-80b3-7095f766e727
+		summarizeBy: none
+		sourceColumn: PRESCRIPTION_FUTURE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRESCRIPTION_FUTURE
+		dataType: string
+		lineageTag: 8356dfdc-4918-461e-a586-acd94688a1d3
+		summarizeBy: none
+		sourceColumn: PRESCRIPTION_FUTURE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b42f9e9c-63ad-45e9-a3c1-62cc81fe2eec
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_prescription_future = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_prescription_future_Table = trusted_starschema_01_Schema{[Name="d_prescription_future",Kind="Table"]}[Data]
+				in
+				    d_prescription_future_Table
+

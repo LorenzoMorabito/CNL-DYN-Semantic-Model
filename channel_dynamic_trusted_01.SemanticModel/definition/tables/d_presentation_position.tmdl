@@ -1,0 +1,49 @@
+table d_presentation_position
+	lineageTag: 6a4d02d4-4682-4b24-9545-84ad1bd791ea
+
+	column PRESENTATION_POSITION_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e493b7b-ce16-4b3f-a43d-49255b19260f
+		summarizeBy: none
+		sourceColumn: PRESENTATION_POSITION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRESENTATION_POSITION
+		dataType: string
+		lineageTag: 827bd6bd-2611-4765-ae10-a34a51689f43
+		summarizeBy: none
+		sourceColumn: PRESENTATION_POSITION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_BY
+		dataType: int64
+		formatString: 0
+		lineageTag: 730c495c-d038-4a48-a3a4-d5f714c2fd83
+		summarizeBy: none
+		sourceColumn: ORDER_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 728dbaea-a0a9-4de5-98e6-3c7373ecd50f
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_presentation_position = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_presentation_position_Table = trusted_starschema_01_Schema{[Name="d_presentation_position",Kind="Table"]}[Data]
+				in
+				    d_presentation_position_Table
+

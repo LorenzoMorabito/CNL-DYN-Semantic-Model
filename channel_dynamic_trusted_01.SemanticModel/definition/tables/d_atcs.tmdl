@@ -1,0 +1,104 @@
+table d_atcs
+	lineageTag: 516b14b6-6a7c-44e3-a0fe-c660bf016cde
+
+	column ATC1_CODE
+		dataType: string
+		lineageTag: 5774c990-350a-4e05-80f5-898a86158f5e
+		summarizeBy: none
+		sourceColumn: ATC1_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC1
+		dataType: string
+		lineageTag: c41f1113-6ed9-4b8f-abae-f321c36dd94c
+		summarizeBy: none
+		sourceColumn: ATC1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC2_CODE
+		dataType: string
+		lineageTag: 1916a34d-0b26-4ae5-ba3c-bdae9aa897e8
+		summarizeBy: none
+		sourceColumn: ATC2_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC2
+		dataType: string
+		lineageTag: 2377e66c-59b5-43a1-9d0d-f7e96d159b76
+		summarizeBy: none
+		sourceColumn: ATC2
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3_CODE
+		dataType: string
+		lineageTag: f4e2e822-4b10-4960-bc23-1c9278596ba2
+		summarizeBy: none
+		sourceColumn: ATC3_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3
+		dataType: string
+		lineageTag: c767c139-d2c5-4784-8e24-ccd56259ee06
+		summarizeBy: none
+		sourceColumn: ATC3
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3_PIE_GROUP
+		dataType: string
+		lineageTag: 37f55b67-9c05-4d9b-b9d2-e94fff61a6a4
+		summarizeBy: none
+		sourceColumn: ATC3_PIE_GROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d198757-4c53-4fb6-9e47-e2dadd71ee42
+		summarizeBy: count
+		sourceColumn: ATC4_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4_CODE
+		dataType: string
+		lineageTag: 611d2cda-8ac4-46c0-b74a-8f9dc119eec8
+		summarizeBy: none
+		sourceColumn: ATC4_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4
+		dataType: string
+		lineageTag: a62c2558-c36e-46f4-b11d-8e0c5b835af1
+		summarizeBy: none
+		sourceColumn: ATC4
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ab6f1f60-dde4-4049-8d17-b69977671bcd
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_atcs = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_atcs_Table = trusted_starschema_01_Schema{[Name="d_atcs",Kind="Table"]}[Data]
+				in
+				    d_atcs_Table
+

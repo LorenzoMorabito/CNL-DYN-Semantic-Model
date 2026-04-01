@@ -1,0 +1,100 @@
+table d_time
+	lineageTag: d016c663-0d8b-41b8-93a6-8d99fd1f6dc1
+
+	column MONTH_ID
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e08f20b5-f115-4b7c-9892-580b4dde610f
+		summarizeBy: none
+		sourceColumn: MONTH_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MONTH
+		dataType: string
+		lineageTag: 78cdd031-65fe-48e9-9992-248ae0d4d95a
+		summarizeBy: none
+		sourceColumn: MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUARTER_ID
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a8731c8f-550e-4858-9a15-1c244c7e2637
+		summarizeBy: none
+		sourceColumn: QUARTER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column QUARTER
+		dataType: string
+		lineageTag: 3996fcbc-0370-42e8-ae70-9d9e6df972d4
+		summarizeBy: none
+		sourceColumn: QUARTER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEMESTER_ID
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9fa98a5f-6c70-454a-bb01-78f8e149bc80
+		summarizeBy: none
+		sourceColumn: SEMESTER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SEMESTER
+		dataType: string
+		lineageTag: c451f1b0-2e1b-480d-888e-d895853c9ec4
+		summarizeBy: none
+		sourceColumn: SEMESTER
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR_ID
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 823801d7-c19e-4111-b214-6428ab4ede8e
+		summarizeBy: none
+		sourceColumn: YEAR_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b1c302a-da90-49a3-bc77-76e13527aa6e
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cffcd5a0-3eaf-4dd3-848a-a1b3ad563aba
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_time = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_time_Table = trusted_starschema_01_Schema{[Name="d_time",Kind="Table"]}[Data]
+				in
+				    d_time_Table
+

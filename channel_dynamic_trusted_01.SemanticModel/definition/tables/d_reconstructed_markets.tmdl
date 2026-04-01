@@ -1,0 +1,56 @@
+table d_reconstructed_markets
+	lineageTag: 824bccb5-1a6f-43d8-ab2c-ccc06bca01ac
+
+	column MARKET_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d3a1ee51-16cb-464a-94b9-3511d1c6bb77
+		summarizeBy: count
+		sourceColumn: MARKET_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET
+		dataType: string
+		lineageTag: 8154c34f-cb84-45a6-b21a-e16a727b9d3b
+		summarizeBy: none
+		sourceColumn: MARKET
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET_CODE
+		dataType: string
+		lineageTag: 41cea655-2c9c-4c5b-b44e-16ed5d075978
+		summarizeBy: none
+		sourceColumn: MARKET_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET_DEFINITION
+		dataType: string
+		lineageTag: 13838cf2-68b7-4f03-b963-aaf9971605d5
+		summarizeBy: none
+		sourceColumn: MARKET_DEFINITION
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 305a7be9-7a32-4104-a689-9b7845861948
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_reconstructed_markets = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_reconstructed_markets_Table = trusted_starschema_01_Schema{[Name="d_reconstructed_markets",Kind="Table"]}[Data]
+				in
+				    d_reconstructed_markets_Table
+

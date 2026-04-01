@@ -1,0 +1,40 @@
+table d_comunication_channels
+	lineageTag: 64501d00-9785-4e3e-8844-5af39fd2eaa2
+
+	column COMUNICATION_CHANNEL_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d648413e-bce3-4ea7-853d-6465ab5b7d6e
+		summarizeBy: none
+		sourceColumn: COMUNICATION_CHANNEL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMUNICATION_CHANNEL
+		dataType: string
+		lineageTag: 723e8e22-619a-4d6d-8558-1f3b8b549f63
+		summarizeBy: none
+		sourceColumn: COMUNICATION_CHANNEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 40c3bd24-ea90-401a-8ec1-a2eaf32c9e4d
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_comunication_channels = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_comunication_channels_Table = trusted_starschema_01_Schema{[Name="d_comunication_channels",Kind="Table"]}[Data]
+				in
+				    d_comunication_channels_Table
+

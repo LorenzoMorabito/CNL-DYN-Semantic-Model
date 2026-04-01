@@ -1,0 +1,40 @@
+table d_meeting_types
+	lineageTag: d3c7577c-ddf7-447d-a7ab-16087698df2a
+
+	column MEETING_TYPE_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa4ef5ec-dfd0-4978-a40f-052a7c4693bc
+		summarizeBy: none
+		sourceColumn: MEETING_TYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEETING_TYPE
+		dataType: string
+		lineageTag: 8045c109-0c1b-49e1-9260-89c8d5e2ea7a
+		summarizeBy: none
+		sourceColumn: MEETING_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dbefa42a-be97-4c2f-a1e8-6edbcbb0b4cb
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_meeting_types = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_meeting_types_Table = trusted_starschema_01_Schema{[Name="d_meeting_types",Kind="Table"]}[Data]
+				in
+				    d_meeting_types_Table
+

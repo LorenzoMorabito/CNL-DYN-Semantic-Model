@@ -1,0 +1,47 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: it-IT
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["d_atcs","d_clinical_trial_types","d_comunication_channels","d_contact_quality","d_contact_types","d_corporations","d_countries","d_details_duration","d_international_brands","d_local_brands","d_manufacturers","d_material_left_abstr_clinical_lit_data","d_material_left_other","d_material_left_patient_educational_lit","d_material_left_promotional_product_lit","d_material_left_samples","d_meeting_types","d_molecules","d_nps","d_prescription_current","d_prescription_future","d_presentation_position","d_products_presented","d_reconstructed_markets","d_representing_company","d_specialty","d_sponsoring_companies","d_time","d_visit_duration","f_channel_dynamic_data"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table d_atcs
+ref table d_clinical_trial_types
+ref table d_comunication_channels
+ref table d_contact_quality
+ref table d_contact_types
+ref table d_corporations
+ref table d_countries
+ref table d_details_duration
+ref table d_international_brands
+ref table d_local_brands
+ref table d_manufacturers
+ref table d_material_left_abstr_clinical_lit_data
+ref table d_material_left_other
+ref table d_material_left_patient_educational_lit
+ref table d_material_left_promotional_product_lit
+ref table d_material_left_samples
+ref table d_meeting_types
+ref table d_molecules
+ref table d_nps
+ref table d_prescription_current
+ref table d_prescription_future
+ref table d_presentation_position
+ref table d_products_presented
+ref table d_reconstructed_markets
+ref table d_representing_company
+ref table d_specialty
+ref table d_sponsoring_companies
+ref table d_time
+ref table d_visit_duration
+ref table f_channel_dynamic_data
+
+ref cultureInfo en-US
+

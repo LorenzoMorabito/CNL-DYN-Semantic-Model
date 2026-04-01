@@ -1,0 +1,56 @@
+table d_manufacturers
+	lineageTag: 6c8b9829-6c75-4150-8a88-e9b02b1f6ea9
+
+	column MANUFACTURER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d6c4de88-484a-46c4-b31d-8a6ddee187d2
+		summarizeBy: none
+		sourceColumn: MANUFACTURER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MANUFACTURER
+		dataType: string
+		lineageTag: 95dd687c-2631-4f2c-8bf6-1f4807b9d728
+		summarizeBy: none
+		sourceColumn: MANUFACTURER
+
+		annotation SummarizationSetBy = Automatic
+
+	column OUR_MANUFACTURER
+		dataType: string
+		lineageTag: 55390597-0fc3-4e6d-a2be-e821febd425e
+		summarizeBy: none
+		sourceColumn: OUR_MANUFACTURER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MENARINI_FLAG
+		dataType: string
+		lineageTag: 452cf5a6-142b-4ce7-a519-e653a3aff23b
+		summarizeBy: none
+		sourceColumn: MENARINI_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e5e668a5-04b8-4118-86a0-386c129b8f93
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_manufacturers = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_manufacturers_Table = trusted_starschema_01_Schema{[Name="d_manufacturers",Kind="Table"]}[Data]
+				in
+				    d_manufacturers_Table
+

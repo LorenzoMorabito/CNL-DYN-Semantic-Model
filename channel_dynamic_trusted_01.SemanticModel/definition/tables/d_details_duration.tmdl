@@ -1,0 +1,49 @@
+table d_details_duration
+	lineageTag: 7982d112-3467-47cc-bd32-de5e71ed3153
+
+	column DETAILS_DURATION_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e7c52a8a-8313-4408-adfe-8ba99f90de31
+		summarizeBy: none
+		sourceColumn: DETAILS_DURATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DETAILS_DURATION
+		dataType: string
+		lineageTag: 1cb60dd5-26a7-4614-9b8f-4bc6045390c8
+		summarizeBy: none
+		sourceColumn: DETAILS_DURATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DETAILS_DURATION_MIN
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f8137ba-1f1b-45d5-b7d9-3111751947d6
+		summarizeBy: none
+		sourceColumn: DETAILS_DURATION_MIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0d1ebeb2-d10b-40a7-ad96-234e26567387
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_details_duration = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_01_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_01",Kind="Schema"]}[Data],
+				    d_details_duration_Table = trusted_starschema_01_Schema{[Name="d_details_duration",Kind="Table"]}[Data]
+				in
+				    d_details_duration_Table
+
