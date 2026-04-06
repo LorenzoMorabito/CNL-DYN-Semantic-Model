@@ -1,0 +1,172 @@
+{
+  "timestamp": "2026-04-06T04:40:35Z",
+  "repository": "LorenzoMorabito/CNL-DYN-Semantic-Model",
+  "mode": "schedule",
+  "branch": "master",
+  "commit": "4d87b15b1e6d543b189d8c59afb505ea3da4ba94",
+  "git_core": {
+    "size_pack_mb": 0,
+    "object_count": 82,
+    "packed_object_count": 0,
+    "pack_count": 0,
+    "loose_object_count": 82
+  },
+  "repo": {
+    "git_size_mb": 0.1,
+    "tracked_file_count": 60,
+    "working_file_count": 57,
+    "commit_count": 50,
+    "largest_current_file_mb": 0.03,
+    "top_current_files": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_mb": 0.03,
+        "size_b": 33834
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_mb": 0.03,
+        "size_b": 29096
+      },
+      {
+        "path": "channel_dynamic_trusted_01.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_mb": 0.02,
+        "size_b": 19330
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/tables/f_channel_dynamic_data.tmdl",
+        "size_mb": 0.01,
+        "size_b": 9917
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "size_mb": 0.01,
+        "size_b": 8747
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/relationships.tmdl",
+        "size_mb": 0.0,
+        "size_b": 4736
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "size_mb": 0.0,
+        "size_b": 4442
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "size_mb": 0.0,
+        "size_b": 4061
+      },
+      {
+        "path": ".github/workflows/repo-health-pr.yml",
+        "size_mb": 0.0,
+        "size_b": 3639
+      },
+      {
+        "path": ".github/workflows/repo-health-push.yml",
+        "size_mb": 0.0,
+        "size_b": 3434
+      }
+    ],
+    "forbidden_files": [],
+    "tracked_excluded_files": [
+      "channel_dynamic_trusted_01.SemanticModel/.pbi/editorSettings.json"
+    ]
+  },
+  "history": {
+    "max_blob_mb": 0.03,
+    "max_blob_path": "repository-health/scripts/RepoHealth.Common.ps1",
+    "blob_over_1mb": 0,
+    "blob_over_5mb": 0,
+    "blob_over_max": 0,
+    "largest_blobs": [
+      {
+        "sha": "cea8bb48cf2917a74279e85eb9161b0467f0e7d6",
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_b": 32924,
+        "size_mb": 0.03
+      },
+      {
+        "sha": "896642581fa9e9dada37434353edc38688b8b3d8",
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_b": 28439,
+        "size_mb": 0.03
+      },
+      {
+        "sha": "3e5b0937e97d93d03de8a442ea015afd73de09bd",
+        "path": "channel_dynamic_trusted_01.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_b": 18390,
+        "size_mb": 0.02
+      },
+      {
+        "sha": "0150785d918035fbfc77c5b135164b6c571cc5c2",
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/tables/f_channel_dynamic_data.tmdl",
+        "size_b": 9543,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "4f83aca5921e71c67d1b0e30b1a902c2e9d62877",
+        "path": "repository-health/analyzer.ps1",
+        "size_b": 8542,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "882c8b14be60143c3bbefb725b275cfe51c96b09",
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/relationships.tmdl",
+        "size_b": 4598,
+        "size_mb": 0.0
+      },
+      {
+        "sha": "823d65b518c63c5e35a55fbeb19cbc16c7ce7103",
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "size_b": 4325,
+        "size_mb": 0.0
+      },
+      {
+        "sha": "ffa514c992e75facb539b048ce1cf7f52a701bcb",
+        "path": "repository-health/RUNBOOK.md",
+        "size_b": 3856,
+        "size_mb": 0.0
+      },
+      {
+        "sha": "57ef6470ab54c9bcd4ed6732620e751ed6a1d91c",
+        "path": ".github/workflows/repo-health-pr.yml",
+        "size_b": 3540,
+        "size_mb": 0.0
+      },
+      {
+        "sha": "4f75b31d2eed16cfbd107249405661cae4de5917",
+        "path": ".github/workflows/repo-health-push.yml",
+        "size_b": 3344,
+        "size_mb": 0.0
+      }
+    ]
+  },
+  "growth": {
+    "hasBaseline": false,
+    "size_pack_growth_pct": null,
+    "git_size_growth_pct": null
+  },
+  "file_growth": {
+    "hasBaseline": false,
+    "baseline_commit": null,
+    "baseline_timestamp": null,
+    "new_entries_count": 0,
+    "grown_entries_count": 0,
+    "shrunk_entries_count": 0,
+    "unchanged_count": 0,
+    "changes": []
+  },
+  "policy": {
+    "status": "FAIL",
+    "fail_reasons": [
+      "Tracked files found in excluded paths: channel_dynamic_trusted_01.SemanticModel/.pbi/editorSettings.json"
+    ],
+    "warning_reasons": []
+  },
+  "git_sizer": {
+    "available": true,
+    "output_path": ".\\repository-health\\outputs\\current\\git-sizer.txt"
+  }
+}
