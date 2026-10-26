@@ -1,0 +1,273 @@
+{
+  "timestamp": "2026-10-26T07:18:07Z",
+  "repository": "LorenzoMorabito/CNL-DYN-Semantic-Model",
+  "mode": "schedule",
+  "branch": "master",
+  "commit": "4d87b15b1e6d543b189d8c59afb505ea3da4ba94",
+  "git_core": {
+    "size_pack_mb": 0.09,
+    "object_count": 402,
+    "packed_object_count": 402,
+    "pack_count": 1,
+    "loose_object_count": 0
+  },
+  "repo": {
+    "git_size_mb": 0.14,
+    "tracked_file_count": 60,
+    "working_file_count": 57,
+    "commit_count": 50,
+    "largest_current_file_mb": 0.03,
+    "top_current_files": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_mb": 0.03,
+        "size_b": 33834
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_mb": 0.03,
+        "size_b": 29096
+      },
+      {
+        "path": "channel_dynamic_trusted_01.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_mb": 0.02,
+        "size_b": 19330
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/tables/f_channel_dynamic_data.tmdl",
+        "size_mb": 0.01,
+        "size_b": 9917
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "size_mb": 0.01,
+        "size_b": 8747
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/relationships.tmdl",
+        "size_mb": 0.0,
+        "size_b": 4736
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "size_mb": 0.0,
+        "size_b": 4442
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "size_mb": 0.0,
+        "size_b": 4061
+      },
+      {
+        "path": ".github/workflows/repo-health-pr.yml",
+        "size_mb": 0.0,
+        "size_b": 3639
+      },
+      {
+        "path": ".github/workflows/repo-health-push.yml",
+        "size_mb": 0.0,
+        "size_b": 3434
+      }
+    ],
+    "forbidden_files": [],
+    "tracked_excluded_files": [
+      "channel_dynamic_trusted_01.SemanticModel/.pbi/editorSettings.json"
+    ]
+  },
+  "history": {
+    "max_blob_mb": 0.06,
+    "max_blob_path": "repository-health/history/top-files-history.csv",
+    "blob_over_1mb": 0,
+    "blob_over_5mb": 0,
+    "blob_over_max": 0,
+    "largest_blobs": [
+      {
+        "sha": "eaad7396c5af79ba4ccac85e7256311a8f787e4d",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 59865,
+        "size_mb": 0.06
+      },
+      {
+        "sha": "7666338cdd1789521110a53fed3c64fc5af0e625",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 57804,
+        "size_mb": 0.06
+      },
+      {
+        "sha": "d50665d1a9bb986ea79bac1728cdad51d093a269",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 55743,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "ccd666c01e13de796f4403bdd114f6bee982ad92",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 53682,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "bf6ab031d5fc6742f130809bbc5b8576a746d391",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 51621,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "7935489c1c271e9f48f2f0c80eb42d049cc8936d",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 49560,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "4f79603ab562ac5707771b2dba2c635399016ee0",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 47499,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "7da5143f8d1df00c010626dabcdaca509b2b5171",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 45438,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "c3b41a48bc6a93b7da80ae9973ee01af7fefba52",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 43377,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "c6e0e4457dd86a51158a55b5195ddeffe9ef7ece",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 41316,
+        "size_mb": 0.04
+      }
+    ]
+  },
+  "growth": {
+    "hasBaseline": true,
+    "size_pack_growth_pct": 0.0,
+    "git_size_growth_pct": 0.0
+  },
+  "file_growth": {
+    "hasBaseline": true,
+    "baseline_commit": "4d87b15b1e6d543b189d8c59afb505ea3da4ba94",
+    "baseline_timestamp": "2026-10-19T07:10:44Z",
+    "new_entries_count": 0,
+    "grown_entries_count": 0,
+    "shrunk_entries_count": 0,
+    "unchanged_count": 10,
+    "changes": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "rank": 1,
+        "previous_rank": 1,
+        "current_size_mb": 0.03,
+        "previous_size_mb": 0.03,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "rank": 2,
+        "previous_rank": 2,
+        "current_size_mb": 0.03,
+        "previous_size_mb": 0.03,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "channel_dynamic_trusted_01.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "rank": 3,
+        "previous_rank": 3,
+        "current_size_mb": 0.02,
+        "previous_size_mb": 0.02,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/tables/f_channel_dynamic_data.tmdl",
+        "rank": 4,
+        "previous_rank": 4,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "rank": 5,
+        "previous_rank": 5,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "channel_dynamic_trusted_01.SemanticModel/definition/relationships.tmdl",
+        "rank": 6,
+        "previous_rank": 6,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "rank": 7,
+        "previous_rank": 7,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "rank": 8,
+        "previous_rank": 8,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": ".github/workflows/repo-health-pr.yml",
+        "rank": 9,
+        "previous_rank": 9,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": ".github/workflows/repo-health-push.yml",
+        "rank": 10,
+        "previous_rank": 10,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      }
+    ]
+  },
+  "policy": {
+    "status": "FAIL",
+    "fail_reasons": [
+      "Tracked files found in excluded paths: channel_dynamic_trusted_01.SemanticModel/.pbi/editorSettings.json"
+    ],
+    "warning_reasons": []
+  },
+  "git_sizer": {
+    "available": true,
+    "output_path": ".\\repository-health\\outputs\\current\\git-sizer.txt"
+  }
+}
