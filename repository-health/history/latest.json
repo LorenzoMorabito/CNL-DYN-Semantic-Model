@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-02T08:42:18Z",
+  "timestamp": "2026-11-09T08:55:19Z",
   "repository": "LorenzoMorabito/CNL-DYN-Semantic-Model",
   "mode": "schedule",
   "branch": "master",
   "commit": "4d87b15b1e6d543b189d8c59afb505ea3da4ba94",
   "git_core": {
     "size_pack_mb": 0.1,
-    "object_count": 413,
-    "packed_object_count": 413,
+    "object_count": 424,
+    "packed_object_count": 424,
     "pack_count": 1,
     "loose_object_count": 0
   },
@@ -82,6 +82,12 @@
     "blob_over_max": 0,
     "largest_blobs": [
       {
+        "sha": "a9e9ab4e242e1ec2b95068dcbe3169a7d3284f5c",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 63987,
+        "size_mb": 0.06
+      },
+      {
         "sha": "416e7ecb481359a07b5aad1ace2b413fb469afb4",
         "path": "repository-health/history/top-files-history.csv",
         "size_b": 61926,
@@ -134,24 +140,18 @@
         "path": "repository-health/history/top-files-history.csv",
         "size_b": 45438,
         "size_mb": 0.04
-      },
-      {
-        "sha": "c3b41a48bc6a93b7da80ae9973ee01af7fefba52",
-        "path": "repository-health/history/top-files-history.csv",
-        "size_b": 43377,
-        "size_mb": 0.04
       }
     ]
   },
   "growth": {
     "hasBaseline": true,
-    "size_pack_growth_pct": 11.11,
-    "git_size_growth_pct": 7.14
+    "size_pack_growth_pct": 0.0,
+    "git_size_growth_pct": 0.0
   },
   "file_growth": {
     "hasBaseline": true,
     "baseline_commit": "4d87b15b1e6d543b189d8c59afb505ea3da4ba94",
-    "baseline_timestamp": "2026-10-26T07:18:07Z",
+    "baseline_timestamp": "2026-11-02T08:42:18Z",
     "new_entries_count": 0,
     "grown_entries_count": 0,
     "shrunk_entries_count": 0,
